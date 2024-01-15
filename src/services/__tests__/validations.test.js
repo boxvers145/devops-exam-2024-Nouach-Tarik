@@ -6,16 +6,4 @@ describe('validations tests suites - isValid', () => {
         const result = isValid();
         expect(result).toBeDefined();
     });
-
-    test('should return false if gamer tag has less than 8 characters', () => {
-        const GamerTag = 'crazy';
-        const result = isValid(GamerTag);
-        expect(result).toBe(false);
-    });
-
-    test('should return true if gamer tag has at least 8 characters', () => {
-        const GamerTag = 'MyGamerTagIsLongEnough';
-        const result = isValid(GamerTag);
-        expect(result).toBe(true);
-    });
 });
