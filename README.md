@@ -41,3 +41,4 @@ This has been built with the version 18.18 of Node JS
 - Student (Lastname and Firstname) : Nouach Tarik
 - Azure repository URL (git) : https://github.com/boxvers145/devops-exam-2024-Nouach-Tarik
 - Azure Static Web app URL : 
+ 
