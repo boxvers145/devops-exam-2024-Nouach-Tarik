@@ -10,6 +10,19 @@ const isValid = (gamerTag) => {
     if (gamerTag.length < 8) {
         return false;
     };
+
+    //if the gamer tag does not contain at least one special character, return false
+    const specialCharacters = '&$!è§à_';
+    let containsSpecialCharacter = false;
+    for (let i = 0; i < gamerTag.length; i++) {
+        if (specialCharacters.includes(gamerTag[i])) {
+            containsSpecialCharacter = true;
+            break;
+        }
+    }
+    if (!containsSpecialCharacter) {
+        return false;
+    }
     
     return true;
 };

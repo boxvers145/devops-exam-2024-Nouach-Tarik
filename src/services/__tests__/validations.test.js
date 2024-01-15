@@ -12,7 +12,7 @@ describe('validations tests suites - isValid', () => {
 
     //test gamertag is longer than 8 characters
     test('should return true if gamer tag has at least 8 characters', () => {
-        const GamerTag = 'MyGamerTagIsLongEnough';
+        const GamerTag = 'MyGamerTagIsLongEnough_';
         const result = isValid(GamerTag);
         expect(result).toBe(true);
     });
@@ -26,7 +26,7 @@ describe('validations tests suites - isValid', () => {
     
     //test gamertag have special characters
     test('should return true if gamer tag contains at least one special character', () => {
-        const gamerTagWithSpecialChar = 'GamerTag$';
+        const gamerTagWithSpecialChar = 'GamerTagè';
         const result = isValid(gamerTagWithSpecialChar);
         expect(result).toBe(true);
     });
