@@ -30,4 +30,18 @@ describe('validations tests suites - isValid', () => {
         const result = isValid(gamerTagWithSpecialChar);
         expect(result).toBe(true);
     });
+
+    //test gamertag doesn't have a number
+    test('should return false if gamer tag does not contain a number', () => {
+        const gamerTagWithoutNumber = 'GamerTag_';
+        const result = isValid(gamerTagWithoutNumber);
+        expect(result).toBe(false);
+    });
+
+    //test gamertag has a number
+    test('should return true if gamer tag contains at least one number', () => {
+        const gamerTagWithNumber = 'GamerTag_1';
+        const result = isValid(gamerTagWithNumber);
+        expect(result).toBe(true);
+    });
 });
