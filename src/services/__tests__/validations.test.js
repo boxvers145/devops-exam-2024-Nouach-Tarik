@@ -12,35 +12,35 @@ describe('validations tests suites - isValid', () => {
 
     //test gamertag is longer than 8 characters
     test('should return true if gamer tag has at least 8 characters', () => {
-        const GamerTag = 'MyGamerTagIsLongEnough_';
+        const GamerTag = 'MyGamerTagIsLongEnough_2';
         const result = isValid(GamerTag);
         expect(result).toBe(true);
     });
 
     //test gamertag don't have special characters
     test('should return false if gamer tag does not contain a special character', () => {
-        const gamerTagWithoutSpecialChar = 'GamerTag';
+        const gamerTagWithoutSpecialChar = 'NoCaraters2';
         const result = isValid(gamerTagWithoutSpecialChar);
         expect(result).toBe(false);
     });
     
     //test gamertag have special characters
     test('should return true if gamer tag contains at least one special character', () => {
-        const gamerTagWithSpecialChar = 'GamerTagè';
+        const gamerTagWithSpecialChar = 'Ihavecaratereè2';
         const result = isValid(gamerTagWithSpecialChar);
         expect(result).toBe(true);
     });
 
     //test gamertag doesn't have a number
     test('should return false if gamer tag does not contain a number', () => {
-        const gamerTagWithoutNumber = 'GamerTag_';
+        const gamerTagWithoutNumber = 'NoNumber_';
         const result = isValid(gamerTagWithoutNumber);
         expect(result).toBe(false);
     });
 
     //test gamertag has a number
     test('should return true if gamer tag contains at least one number', () => {
-        const gamerTagWithNumber = 'GamerTag_1';
+        const gamerTagWithNumber = 'IhaveNumber_1';
         const result = isValid(gamerTagWithNumber);
         expect(result).toBe(true);
     });

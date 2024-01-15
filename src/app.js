@@ -43,7 +43,7 @@ try {
             feedbackMessage.textContent = 'your gamertag is empty';
         }else{
             if (!isValid(gamerTagValue)) {
-                feedbackMessage.textContent = 'your gamertag is too short, or does not contain a special character';
+                feedbackMessage.textContent = 'your gamertag is too short, or does not contain a special character, or does not contain a number';
             }else{
                 feedbackMessage.textContent = 'your gamertag is valid';
             }
