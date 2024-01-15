@@ -16,4 +16,18 @@ describe('validations tests suites - isValid', () => {
         const result = isValid(GamerTag);
         expect(result).toBe(true);
     });
+
+    //test gamertag don't have special characters
+    test('should return false if gamer tag does not contain a special character', () => {
+        const gamerTagWithoutSpecialChar = 'GamerTag';
+        const result = isValid(gamerTagWithoutSpecialChar);
+        expect(result).toBe(false);
+    });
+    
+    //test gamertag have special characters
+    test('should return true if gamer tag contains at least one special character', () => {
+        const gamerTagWithSpecialChar = 'GamerTag$';
+        const result = isValid(gamerTagWithSpecialChar);
+        expect(result).toBe(true);
+    });
 });
