@@ -37,11 +37,18 @@ try {
     });
 
     checkButton.addEventListener('click', () => {
-        const validationResult = isValid(gamerTagValue);
         // TODO : Define the correct error message regarding the validation rules
-        feedbackMessage.textContent = validationResult
-            ? 'Gamer tag is not valid'
-            : 'Gamer tag is valid';
+
+        if (isValid(gamerTagValue) === undefined || gamerTagValue === '') {
+            feedbackMessage.textContent = 'your gamertag is empty';
+        }else{
+            if (!isValid(gamerTagValue)) {
+                feedbackMessage.textContent = 'your gamertag is too short';
+            }else{
+                feedbackMessage.textContent = 'your gamertag is valid';
+            }
+        }
+        
         // ----------------------------------------------------------------------
         body.setAttribute(
             'style',
