@@ -23,6 +23,18 @@ const isValid = (gamerTag) => {
     if (!containsSpecialCharacter) {
         return false;
     }
+
+    //if the gamer tag does not contain at least one number, return false
+    let containsNumber = false;
+    for (let i = 0; i < gamerTag.length; i++) {
+        if (!isNaN(gamerTag[i])) {
+            containsNumber = true;
+            break;
+        }
+    }
+    if (!containsNumber) {
+        return false;
+    }
     
     return true;
 };
