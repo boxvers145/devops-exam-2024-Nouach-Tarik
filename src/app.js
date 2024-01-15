@@ -45,7 +45,7 @@ try {
         // ----------------------------------------------------------------------
         body.setAttribute(
             'style',
-            validationResult ? greenBackgroundColor : redBackgroundColor
+            isValid(gamerTagValue) ? greenBackgroundColor : redBackgroundColor
         );
     });
 
